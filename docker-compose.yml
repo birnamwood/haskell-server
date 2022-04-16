@@ -1,0 +1,23 @@
+version: '3'
+services:
+
+  postgres:
+    container_name: postgres
+    ports:
+      - 5432:5432
+    build:
+      context: .
+      dockerfile: ./docker/postgres/Dockerfile
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=db
+
+  haskell:
+      container_name: haskell-server
+      ports:
+        - 8000:8000
+      depends_on:
+        - postgres
+      build:
+        dockerfile: ./docker/haskell/Dockerfile
