@@ -1,6 +1,6 @@
 module Main where
 
-import Lib
+import Router
 
 main :: IO ()
 main = runServant

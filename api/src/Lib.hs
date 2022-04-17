@@ -1,6 +1,6 @@
 module Lib
-    ( runServant
+    ( lib
     ) where
 
-runServant :: IO ()
-runServant = putStrLn "runServant"
+lib :: IO ()
+lib = putStrLn "runServant"
