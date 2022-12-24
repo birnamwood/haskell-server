@@ -18,7 +18,7 @@ runServant = do
     run port app
     putStrLn "stopServer"
 
-type API = "test" :> Get '[JSON] Int
+type API = "" :> Get '[JSON] Int
         :<|> "test2" :> Get '[JSON] String
 
 server :: Server API
